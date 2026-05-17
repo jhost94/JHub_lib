@@ -1,4 +1,4 @@
-package com.avs.utils.utils;
+package center.jhub.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
