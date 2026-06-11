@@ -1,0 +1,45 @@
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Deploy environment (unused)"
+        required: true
+        type: choice
+        options:
+        - dev
+        - staging
+        - prod
+
+      run_tests:
+        description: "Run tests before deploy (unused)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+
+      - name: Build with Maven
+        run: mvn -B clean package
+
+      - name: Deploy to GitHub Packages
+        run: mvn -B deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
