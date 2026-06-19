@@ -45,10 +45,6 @@ public abstract class BaseHttpService {
         return APIUtils.postResponse(getObjectMapper(), getClient(), getBaseUrl(), path, body, options);
     }
 
-    protected <T> HttpResponse<String> putResponse(String path, T o, HttpRequestOptions options)  {
-        return APIUtils.putResponse(getObjectMapper(), getClient(), getBaseUrl(), path, o, options);
-    }
-
     /**
      * DELETE Responses
      */
@@ -56,6 +52,10 @@ public abstract class BaseHttpService {
     /**
      * PUT Responses
      */
+
+    protected <T> HttpResponse<String> putResponse(String path, T o, HttpRequestOptions options)  {
+        return APIUtils.putResponse(getObjectMapper(), getClient(), getBaseUrl(), path, o, options);
+    }
 
     /**
      * PATCH Responses
