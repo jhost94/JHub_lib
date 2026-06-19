@@ -13,6 +13,7 @@
   <modules>
     <module>java/j-cache</module>
     <module>java/utils</module>
+    <module>java/text-to-ascii</module>
   </modules>
 
   <properties>
