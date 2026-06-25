@@ -38,9 +38,20 @@ public class SpecialTextConstants {
     public static final String ARROW_UP_LEFT = "↖";
     public static final String ARROW_DOWN_RIGHT = "↘";
     public static final String ARROW_DOWN_LEFT = "↙";
+    public static final String ARROW_UP_DOWN_SIDEWAYS = "⇵";
 
     public static final String ARROW_DOWN_FILLED = "▼";
     public static final String ARROW_UP_FILLED = "▲";
     public static final String ARROW_LEFT_FILLED = "◀";
     public static final String ARROW_RIGHT_FILLED = "▶";
+    public static final String ARROW_RIGHT_FILLED_FLAT = "►";
+    public static final String ARROW_LEFT_FILLED_FLAT = "◄";
+
+    public static final String ARROW_UP_DOWN_HOLLOW = "⇕";
+    public static final String ARROW_LEFT_RIGHT_HOLLOW = "⇔";
+    public static final String ARROW_UP_RIGHT_HOLLOW = "⇗";
+    public static final String ARROW_UP_LEFT_HOLLOW = "⇖";
+    public static final String ARROW_DOWN_RIGHT_HOLLOW = "⇘";
+    public static final String ARROW_DOWN_LEFT_HOLLOW = "⇙";
+
 }
